@@ -1,0 +1,29 @@
+{{!-- <h1> Gigs template </h1> --}}
+
+ <section id="gigs" class="container">
+    <h1>All Gigs</h1>
+
+    {{#each gigs}}
+
+    {{!-- loop through gigs --}}
+
+    <div class="gig">
+      <h3> {{ title }}</h3>
+      <p>{{ description }} </p>
+      <ul>
+        <li>Budget: {{budget}}</li>
+        <li><a href="mailto: {{contactemail}}" class="btn btn-reverse">Apply Now</a></li>
+      </ul>
+      <div class="tech">
+        <small>Technologies Needed: <span> {{ technology }} </span></small>
+      </div>
+    </div>
+
+
+    {{else}}
+    <p> No gigs available! </p>
+
+    {{/each}}
+    
+    
+  </section>
